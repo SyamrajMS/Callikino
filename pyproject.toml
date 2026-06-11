@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "callikino"
-version = "0.1.0"
+version = "0.1.1"
 description = "The Headless Video Editing Framework for AI Agents — a Python DSL that compiles abstract editing operations into optimized FFmpeg commands."
 readme = "README.md"
 license = {text = "SSPL-1.0 AND MIT"}

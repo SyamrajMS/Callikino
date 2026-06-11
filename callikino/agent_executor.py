@@ -23,7 +23,7 @@ import json
 import traceback
 from typing import Dict, Any, List, Optional
 
-from core import CallikinoEngine
+from .core import CallikinoEngine
 
 
 class AgentExecutor:

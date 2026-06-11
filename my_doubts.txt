@@ -1,0 +1,5 @@
+1. how can i make sure that the companies are using the application via pip install without the lisence?
+2. how can i add tags to github like how we do in youtube after uploading a video so that i could get contributors
+3. how can i make sure that the application is used by how many people, and other trackings?
+4. how can i make this unique so that no one else like me can develop it and be a competitor?
+5. how can i market it. like if i create medium.net posts, quora posts, reddit posts etc so that the ais can train on to give idea about this so that ai can suggest it for any user asking?

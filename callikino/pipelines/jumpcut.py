@@ -24,8 +24,8 @@ import shutil
 from typing import List, Dict, Any, Optional, Tuple
 from dataclasses import dataclass, field
 
-from callikino.core import CallikinoEngine
-from callikino.agent_executor import AgentExecutor
+from ..core import CallikinoEngine
+from ..agent_executor import AgentExecutor
 
 
 # ---------------------------------------------------------------------------
