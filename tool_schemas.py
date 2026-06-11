@@ -397,6 +397,360 @@ GENERATE_FFMPEG_COMMAND = {
     }
 }
 
+# ---------------------------------------------------------------------------
+# New Tool Schemas — Social Media Editing Features
+# ---------------------------------------------------------------------------
+
+ADD_TRANSITION = {
+    "type": "function",
+    "function": {
+        "name": "add_transition",
+        "description": (
+            "Add a video transition effect between consecutive clips. "
+            "Supports 25+ transition types including fade, wipe, slide, dissolve, and more."
+        ),
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "transition_type": {
+                    "type": "string",
+                    "description": (
+                        "Transition style: 'fade', 'wipeleft', 'wiperight', 'wipeup', "
+                        "'wipedown', 'slideleft', 'slideright', 'dissolve', 'fadeblack', "
+                        "'fadewhite', 'circleopen', 'circleclose', 'pixelize', etc. Default 'fade'."
+                    )
+                },
+                "duration": {
+                    "type": "number",
+                    "description": "Transition duration in seconds (0.1-5.0). Default 1.0."
+                },
+                "offset": {
+                    "type": "number",
+                    "description": "Optional timeline offset where the transition starts (seconds)."
+                }
+            },
+            "required": []
+        }
+    }
+}
+
+CROP_RESIZE = {
+    "type": "function",
+    "function": {
+        "name": "crop_resize",
+        "description": (
+            "Crop, resize, or change the aspect ratio of the video. "
+            "Essential for converting 16:9 YouTube videos to 9:16 Reels/Shorts."
+        ),
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "target_width": {
+                    "type": "integer",
+                    "description": "Final output width in pixels."
+                },
+                "target_height": {
+                    "type": "integer",
+                    "description": "Final output height in pixels."
+                },
+                "crop_x": {
+                    "type": "integer",
+                    "description": "Left offset for crop in pixels. Default 0."
+                },
+                "crop_y": {
+                    "type": "integer",
+                    "description": "Top offset for crop in pixels. Default 0."
+                },
+                "crop_w": {
+                    "type": "integer",
+                    "description": "Crop region width in pixels."
+                },
+                "crop_h": {
+                    "type": "integer",
+                    "description": "Crop region height in pixels."
+                },
+                "pad_color": {
+                    "type": "string",
+                    "description": "Color for letterbox/pillarbox padding. Default 'black'."
+                },
+                "aspect_ratio": {
+                    "type": "string",
+                    "description": "Target aspect ratio (e.g. '9:16', '1:1', '4:5')."
+                }
+            },
+            "required": []
+        }
+    }
+}
+
+ADD_OVERLAY = {
+    "type": "function",
+    "function": {
+        "name": "add_overlay",
+        "description": (
+            "Overlay an image or logo (watermark, subscribe button, branding) "
+            "on top of the video at a specified position."
+        ),
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "image_alias": {
+                    "type": "string",
+                    "description": "Alias of the image asset (must be imported first)."
+                },
+                "x": {
+                    "type": "string",
+                    "description": "Horizontal position expression. Default 'W-w-10' (top-right)."
+                },
+                "y": {
+                    "type": "string",
+                    "description": "Vertical position expression. Default '10'."
+                },
+                "scale_w": {
+                    "type": "integer",
+                    "description": "Optional width to scale the overlay image to."
+                },
+                "scale_h": {
+                    "type": "integer",
+                    "description": "Optional height to scale the overlay image to."
+                },
+                "opacity": {
+                    "type": "number",
+                    "description": "Overlay opacity (0.0=invisible, 1.0=opaque). Default 1.0."
+                },
+                "start_time": {
+                    "type": "number",
+                    "description": "Optional. When the overlay appears (seconds)."
+                },
+                "end_time": {
+                    "type": "number",
+                    "description": "Optional. When the overlay disappears (seconds)."
+                }
+            },
+            "required": ["image_alias"]
+        }
+    }
+}
+
+AUDIO_FADE = {
+    "type": "function",
+    "function": {
+        "name": "audio_fade",
+        "description": (
+            "Apply a smooth audio fade-in or fade-out effect. "
+            "Essential for professional music intros and outros."
+        ),
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "fade_type": {
+                    "type": "string",
+                    "description": "Fade direction: 'in' or 'out'. Default 'in'."
+                },
+                "start_time": {
+                    "type": "number",
+                    "description": "When the fade begins (seconds). Default 0.0."
+                },
+                "duration": {
+                    "type": "number",
+                    "description": "Duration of the fade (0.1-30.0 seconds). Default 2.0."
+                }
+            },
+            "required": []
+        }
+    }
+}
+
+ADD_PIP = {
+    "type": "function",
+    "function": {
+        "name": "add_pip",
+        "description": (
+            "Add a picture-in-picture overlay. Perfect for webcam overlays, "
+            "reaction videos, and tutorial screencasts."
+        ),
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "pip_alias": {
+                    "type": "string",
+                    "description": "Alias of the PiP video asset (must be imported first)."
+                },
+                "x": {
+                    "type": "string",
+                    "description": "Horizontal position. Default 'W-w-20' (bottom-right)."
+                },
+                "y": {
+                    "type": "string",
+                    "description": "Vertical position. Default '20'."
+                },
+                "scale": {
+                    "type": "number",
+                    "description": "PiP size relative to main video (0.1-1.0). Default 0.25."
+                },
+                "start_time": {
+                    "type": "number",
+                    "description": "Optional. When the PiP appears (seconds)."
+                },
+                "end_time": {
+                    "type": "number",
+                    "description": "Optional. When the PiP disappears (seconds)."
+                },
+                "border_width": {
+                    "type": "integer",
+                    "description": "Border around PiP in pixels (0-10). Default 0."
+                },
+                "border_color": {
+                    "type": "string",
+                    "description": "Color of PiP border. Default 'white'."
+                }
+            },
+            "required": ["pip_alias"]
+        }
+    }
+}
+
+APPLY_BLUR = {
+    "type": "function",
+    "function": {
+        "name": "apply_blur",
+        "description": (
+            "Apply a blur effect to the video. Full-frame or region-based. "
+            "Useful for censoring, depth-of-field, or blurred backgrounds."
+        ),
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "blur_type": {
+                    "type": "string",
+                    "description": "Blur algorithm: 'gaussian' or 'box'. Default 'gaussian'."
+                },
+                "strength": {
+                    "type": "number",
+                    "description": "Blur intensity (1.0-100.0). Default 5.0."
+                },
+                "start_time": {
+                    "type": "number",
+                    "description": "Optional. When the blur starts (seconds)."
+                },
+                "end_time": {
+                    "type": "number",
+                    "description": "Optional. When the blur ends (seconds)."
+                }
+            },
+            "required": []
+        }
+    }
+}
+
+ROTATE_FLIP = {
+    "type": "function",
+    "function": {
+        "name": "rotate_flip",
+        "description": (
+            "Rotate, flip, or mirror the video. Fix phone footage orientation "
+            "or create mirror effects."
+        ),
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "action": {
+                    "type": "string",
+                    "description": (
+                        "'hflip' (mirror), 'vflip' (flip), 'cw' (90° clockwise), "
+                        "'ccw' (90° counter-clockwise), 'cw_flip', 'ccw_flip', '180'. "
+                        "Default 'hflip'."
+                    )
+                }
+            },
+            "required": []
+        }
+    }
+}
+
+REVERSE_CLIP = {
+    "type": "function",
+    "function": {
+        "name": "reverse_clip",
+        "description": (
+            "Reverse the playback of the video (and optionally audio). "
+            "Creates satisfying reverse effects for creative transitions."
+        ),
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "reverse_audio": {
+                    "type": "boolean",
+                    "description": "If true, also reverse the audio track. Default true."
+                }
+            },
+            "required": []
+        }
+    }
+}
+
+CHROMA_KEY = {
+    "type": "function",
+    "function": {
+        "name": "chroma_key",
+        "description": (
+            "Remove a green screen (or any solid color) background from the video. "
+            "Optionally replace with a different background asset."
+        ),
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "color": {
+                    "type": "string",
+                    "description": "Key color in hex. '0x00FF00'=green, '0x0000FF'=blue. Default '0x00FF00'."
+                },
+                "similarity": {
+                    "type": "number",
+                    "description": "Color match strictness (0.01-1.0). Lower=stricter. Default 0.3."
+                },
+                "blend": {
+                    "type": "number",
+                    "description": "Edge blending amount (0.0-1.0). Default 0.1."
+                },
+                "bg_alias": {
+                    "type": "string",
+                    "description": "Optional alias of background replacement asset."
+                }
+            },
+            "required": []
+        }
+    }
+}
+
+AUDIO_NORMALIZE = {
+    "type": "function",
+    "function": {
+        "name": "audio_normalize",
+        "description": (
+            "Normalize audio loudness using EBU R128 standard. "
+            "Ensures consistent volume for YouTube, Spotify, and social media."
+        ),
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "target_loudness": {
+                    "type": "number",
+                    "description": "Target loudness in LUFS (-70 to -5). YouTube/Spotify: -14. Default -16."
+                },
+                "true_peak": {
+                    "type": "number",
+                    "description": "Maximum true peak in dBTP (-9 to 0). Default -1.5."
+                },
+                "loudness_range": {
+                    "type": "number",
+                    "description": "Target loudness range in LU (1-20). Default 11.0."
+                }
+            },
+            "required": []
+        }
+    }
+}
+
 
 # ---------------------------------------------------------------------------
 # Aggregated schema list — pass this directly to your LLM API as `tools`
@@ -413,6 +767,16 @@ TOOL_SCHEMAS: List[Dict[str, Any]] = [
     ADD_SUBTITLE,
     KINETIC_ZOOM,
     SPEED_RAMP,
+    ADD_TRANSITION,
+    CROP_RESIZE,
+    ADD_OVERLAY,
+    AUDIO_FADE,
+    ADD_PIP,
+    APPLY_BLUR,
+    ROTATE_FLIP,
+    REVERSE_CLIP,
+    CHROMA_KEY,
+    AUDIO_NORMALIZE,
     COMPILE_BLUEPRINT,
     GENERATE_FFMPEG_COMMAND,
 ]
@@ -427,3 +791,4 @@ def get_tool_schemas() -> List[Dict[str, Any]]:
 def get_tool_names() -> List[str]:
     """Returns a flat list of all available tool function names."""
     return [t["function"]["name"] for t in TOOL_SCHEMAS]
+

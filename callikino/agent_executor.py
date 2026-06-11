@@ -23,7 +23,7 @@ import json
 import traceback
 from typing import Dict, Any, List, Optional
 
-from callikino.core import CallikinoEngine
+from core import CallikinoEngine
 
 
 class AgentExecutor:
@@ -58,6 +58,16 @@ class AgentExecutor:
             "add_subtitle": self.engine.add_subtitle,
             "kinetic_zoom": self.engine.kinetic_zoom,
             "speed_ramp": self.engine.speed_ramp,
+            "add_transition": self.engine.add_transition,
+            "crop_resize": self.engine.crop_resize,
+            "add_overlay": self.engine.add_overlay,
+            "audio_fade": self.engine.audio_fade,
+            "add_pip": self.engine.add_pip,
+            "apply_blur": self.engine.apply_blur,
+            "rotate_flip": self.engine.rotate_flip,
+            "reverse_clip": self.engine.reverse_clip,
+            "chroma_key": self.engine.chroma_key,
+            "audio_normalize": self.engine.audio_normalize,
             "compile_blueprint": self.engine.compile_blueprint,
             "generate_ffmpeg_command": self.engine.generate_ffmpeg_command,
         }

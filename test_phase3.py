@@ -78,7 +78,7 @@ def run_tests():
         # ==============================================================
         # TEST 1: Tool Schema Structure
         # ==============================================================
-        assert len(TOOL_SCHEMAS) == 12, f"Expected 12 tools, got {len(TOOL_SCHEMAS)}"
+        assert len(TOOL_SCHEMAS) == 22, f"Expected 22 tools, got {len(TOOL_SCHEMAS)}"
 
         for schema in TOOL_SCHEMAS:
             assert "type" in schema
@@ -89,20 +89,22 @@ def run_tests():
             assert "parameters" in schema["function"]
             assert schema["function"]["parameters"]["type"] == "object"
 
-        print("\n[PASS] Tool schemas: all 12 schemas are structurally valid")
+        print("\n[PASS] Tool schemas: all 22 schemas are structurally valid")
 
         # ==============================================================
         # TEST 2: Tool Names List
         # ==============================================================
         names = get_tool_names()
-        expected_names = [
+        core_names = [
             "import_asset", "add_cut_clip", "add_audio_clip",
             "adjust_color", "apply_lut", "set_volume", "audio_duck",
             "add_subtitle", "kinetic_zoom", "speed_ramp",
             "compile_blueprint", "generate_ffmpeg_command"
         ]
-        assert names == expected_names, f"Tool names mismatch: {names}"
-        print("[PASS] Tool names: all 12 names match expected order")
+        for cn in core_names:
+            assert cn in names, f"Missing core tool: {cn}"
+        assert len(names) == 22, f"Expected 22 tool names, got {len(names)}"
+        print("[PASS] Tool names: all 22 names present including 12 core")
 
         # ==============================================================
         # TEST 3: get_tool_schemas returns deep copy
