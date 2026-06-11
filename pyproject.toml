@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "callikino"
+version = "0.1.0"
+description = "The Headless Video Editing Framework for AI Agents — a Python DSL that compiles abstract editing operations into optimized FFmpeg commands."
+readme = "README.md"
+license = {text = "SSPL-1.0 AND MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "Syamraj"}
+]
+keywords = [
+    "video-editing", "ffmpeg", "ai-agents", "dsl", "tool-calling",
+    "mcp", "automation", "headless", "vlog", "pipeline"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Multimedia :: Video",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/syamraj/callikino"
+Repository = "https://github.com/syamraj/callikino"
+Issues = "https://github.com/syamraj/callikino/issues"
+
+[project.scripts]
+callikino = "callikino.cli:main"
+callikino-mcp = "callikino.mcp_server:main"
+
+[tool.setuptools.packages.find]
+include = ["callikino*"]
+
+[tool.setuptools.package-data]
+callikino = ["*.json"]
