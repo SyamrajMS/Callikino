@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# Callikino
-A headless, programmatic video editing framework built for AI agents. Edit cinema via clean JSON states and single-pass, hardware-accelerated FFmpeg
-=======
 <p align="center">
   <h1 align="center">CALLIKINO</h1>
   <p align="center"><strong>The Headless Video Editing Framework for AI Agents</strong></p>
@@ -268,11 +264,9 @@ print(pipeline.get_summary())
 
 ## License
 
-Dual-licensed:
-- **MIT** — Free for individuals, education, and open-source
-- **Commercial** — Required for SaaS, enterprise, and revenue-generating use
-
-See [LICENSE](LICENSE) for details.
+Callikino is dual-licensed. It is 100% free for individuals, students, and small teams (<3 employees). 
+For commercial use in larger companies or funded startups, a commercial tier license is required. 
+See the [LICENSE](LICENSE) file for full details
 
 ---
 
