@@ -1126,7 +1126,11 @@ class CallikinoEngine:
         if not video_layers:
             raise ValueError("Timeline has no video layers. Nothing to render.")
 
-        ffmpeg_bin = shutil.which("ffmpeg") or "ffmpeg"
+        try:
+            import imageio_ffmpeg
+            ffmpeg_bin = imageio_ffmpeg.get_ffmpeg_exe()
+        except ImportError:
+            ffmpeg_bin = shutil.which("ffmpeg") or "ffmpeg"
 
         # --- SINGLE CLIP: stream-copy trim ---
         if len(video_layers) == 1 and not self._needs_reencoding():
@@ -1222,3 +1226,20 @@ class CallikinoEngine:
             f' "{output_path}"'
         )
         return cmd
+
+    def render(self, output_path: str) -> None:
+        """
+        Generates the FFmpeg command and immediately executes it to render the final video.
+        Requires FFmpeg to be installed and available in the system PATH.
+        """
+        import subprocess
+        cmd = self.generate_ffmpeg_command(output_path)
+        print(f"\\n=== Rendering Video to {output_path} ===")
+        print(f"Executing: {cmd}\\n")
+        try:
+            # We use shell=True because the ffmpeg command has complex quoting
+            subprocess.run(cmd, shell=True, check=True)
+            print(f"\\n=== Render Complete: {output_path} ===")
+        except subprocess.CalledProcessError as e:
+            print(f"\\n[ERROR] FFmpeg failed with error code: {e.returncode}")
+            raise

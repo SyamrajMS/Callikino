@@ -397,6 +397,27 @@ GENERATE_FFMPEG_COMMAND = {
     }
 }
 
+RENDER = {
+    "type": "function",
+    "function": {
+        "name": "render",
+        "description": (
+            "Generates the FFmpeg command and immediately executes it to "
+            "render the final video under the hood using subprocess."
+        ),
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "output_path": {
+                    "type": "string",
+                    "description": "File path for the rendered output video."
+                }
+            },
+            "required": ["output_path"]
+        }
+    }
+}
+
 # ---------------------------------------------------------------------------
 # New Tool Schemas — Social Media Editing Features
 # ---------------------------------------------------------------------------
@@ -779,6 +800,7 @@ TOOL_SCHEMAS: List[Dict[str, Any]] = [
     AUDIO_NORMALIZE,
     COMPILE_BLUEPRINT,
     GENERATE_FFMPEG_COMMAND,
+    RENDER,
 ]
 
 

@@ -4,13 +4,17 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "callikino"
-version = "0.1.1"
+version = "0.1.2"
 description = "The Headless Video Editing Framework for AI Agents — a Python DSL that compiles abstract editing operations into optimized FFmpeg commands."
 readme = "README.md"
 license = {text = "SSPL-1.0 AND MIT"}
 requires-python = ">=3.10"
 authors = [
     {name = "Syamraj"}
+]
+dependencies = [
+    "pydantic>=2.0.0",
+    "imageio-ffmpeg>=0.4.9"
 ]
 keywords = [
     "video-editing", "ffmpeg", "ai-agents", "dsl", "tool-calling",

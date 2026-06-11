@@ -70,6 +70,7 @@ class AgentExecutor:
             "audio_normalize": self.engine.audio_normalize,
             "compile_blueprint": self.engine.compile_blueprint,
             "generate_ffmpeg_command": self.engine.generate_ffmpeg_command,
+            "render": self.engine.render,
         }
 
     def dispatch(self, tool_call: Dict[str, Any]) -> Dict[str, Any]:
