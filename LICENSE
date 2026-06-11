@@ -1,40 +1,46 @@
-Callikino Dual License
-======================
+Callikino Custom Dual-License Agreement
 
-Copyright (c) 2026 Syamraj. All rights reserved.
+Copyright (c) 2026 Syamraj M S
 
+This software is dual-licensed. It is available under both a Free/Source-Available Tier and a Commercial Tier.
 
-LICENSE A — MIT License (Individual / Non-Commercial Use)
----------------------------------------------------------
+===========================================================================
+1. FREE / SOURCE-AVAILABLE TIER (Individuals, Students, and Small Teams)
+===========================================================================
 
-Permission is hereby granted, free of charge, to any individual person
-obtaining a copy of this software and associated documentation files (the
-"Software"), to use, copy, modify, and distribute the Software for
-non-commercial, personal, educational, or open-source purposes, subject
-to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy 
+of this software and associated documentation files (the "Software"), to use, 
+copy, modify, merge, publish, or distribute the Software for personal, 
+educational, non-commercial, or small-team commercial purposes, subject to 
+the following conditions:
 
-The above copyright notice and this permission notice shall be included
-in all copies or substantial portions of the Software.
+- SMALL-TEAM LIMIT: The entity using the Software must have fewer than three (3) 
+  full-time equivalent employees (including founders and contractors) and must 
+  not have raised more than $100,000 USD in total funding.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+The above copyright notice and this permission notice shall be included in all 
+copies or substantial portions of the Software.
+
+===========================================================================
+2. COMMERCIAL TIER (Enterprises, Funded Startups, and Scaled Platforms)
+===========================================================================
+
+Any entity that does not meet the criteria of the Free Tier (e.g., companies 
+with three (3) or more employees, or companies that have raised more than 
+$100,000 USD in funding) MUST obtain a commercial license to use, modify, or 
+distribute this Software in production or as part of a commercial SaaS product.
+
+To acquire a commercial company license, contact the author directly at:
+me@syamraj.in
+
+===========================================================================
+3. DISCLAIMER
+===========================================================================
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
 SOFTWARE.
-
-
-LICENSE B — Commercial License
-------------------------------
-
-For any commercial use, including but not limited to:
-  - Incorporation into SaaS products
-  - Use within revenue-generating automation pipelines
-  - Distribution as part of a paid software product
-  - Enterprise or organizational deployment
-
-A separate commercial license is required. Contact the author at
-the project's GitHub repository for licensing terms.
-
-Unauthorized commercial use is a violation of this license.
