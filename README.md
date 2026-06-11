@@ -161,7 +161,7 @@ callikino-mcp
 
 ---
 
-## Automated Pipeline: Tharun Speaks
+## Automated Pipeline: Modern edit example
 
 A complete 5-layer automation pipeline for transforming raw talking-head footage into high-retention vlogs:
 
