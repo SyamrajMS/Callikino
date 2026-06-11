@@ -161,14 +161,14 @@ callikino-mcp
 
 ---
 
-## Automated JumpCut Pipeline
+## Automated Pipeline: Tharun Speaks
 
-A complete 5-layer automation pipeline for transforming raw talking-head footage into high-retention social media videos:
+A complete 5-layer automation pipeline for transforming raw talking-head footage into high-retention vlogs:
 
 ```python
-from callikino.pipelines.jumpcut import JumpCutPipeline
+from callikino.pipelines.tharun_speaks import TharunSpeaksPipeline
 
-pipeline = JumpCutPipeline("raw_footage.mp4")
+pipeline = TharunSpeaksPipeline("raw_footage.mp4")
 
 # Layer 1: Strip silence (jump cuts)
 pipeline.strip_silence(noise_db=-30, min_silence=0.5)
@@ -264,13 +264,14 @@ print(pipeline.get_summary())
 
 ## License
 
-Callikino is dual-licensed. It is 100% free for individuals, students, and small teams (<3 employees). 
-For commercial use in larger companies or funded startups, a commercial tier license is required. 
-See the [LICENSE](LICENSE) file for full details
+Dual-licensed:
+- **MIT** — Free for individuals, education, and open-source
+- **Commercial** — Required for SaaS, enterprise, and revenue-generating use
+
+See [LICENSE](LICENSE) for details.
 
 ---
 
 <p align="center">
   <strong>Built for agents, not for GUIs.</strong>
 </p>
->>>>>>> c184b06 (Initial commit. Basic editing features that 60% social media editors are included)
