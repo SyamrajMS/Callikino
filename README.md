@@ -264,11 +264,9 @@ print(pipeline.get_summary())
 
 ## License
 
-Dual-licensed:
-- **MIT** — Free for individuals, education, and open-source
-- **Commercial** — Required for SaaS, enterprise, and revenue-generating use
-
-See [LICENSE](LICENSE) for details.
+Callikino is dual-licensed. It is 100% free for individuals, students, and small teams (<3 employees). 
+For commercial use in larger companies or funded startups, a commercial tier license is required. 
+See the [LICENSE](LICENSE) file for full details.
 
 ---
 
