@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 MIT License
 
 Copyright (c) 2026 Syamraj M S
@@ -14,8 +15,48 @@ copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+=======
+Callikino Dual License
+======================
+
+Copyright (c) 2026 Syamraj. All rights reserved.
+
+
+LICENSE A — MIT License (Individual / Non-Commercial Use)
+---------------------------------------------------------
+
+Permission is hereby granted, free of charge, to any individual person
+obtaining a copy of this software and associated documentation files (the
+"Software"), to use, copy, modify, and distribute the Software for
+non-commercial, personal, educational, or open-source purposes, subject
+to the following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+>>>>>>> c184b06 (Initial commit. Basic editing features that 60% social media editors are included)
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+<<<<<<< HEAD
+=======
+
+
+LICENSE B — Commercial License
+------------------------------
+
+For any commercial use, including but not limited to:
+  - Incorporation into SaaS products
+  - Use within revenue-generating automation pipelines
+  - Distribution as part of a paid software product
+  - Enterprise or organizational deployment
+
+A separate commercial license is required. Contact the author at
+the project's GitHub repository for licensing terms.
+
+Unauthorized commercial use is a violation of this license.
+>>>>>>> c184b06 (Initial commit. Basic editing features that 60% social media editors are included)

@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "resolution": "1920x1080",
+    "fps": 30,
+    "sample_rate": 48000
+  },
+  "assets": {},
+  "timeline": {
+    "video_layers": [],
+    "audio_layers": [],
+    "text_layers": []
+  }
+}
